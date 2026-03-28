@@ -1,0 +1,108 @@
+{
+  "app": {
+    "eyebrow": "Route simulator"
+  },
+  "search": {
+    "title": "Search route",
+    "subtitle": "Find your best transport option",
+    "origin": "Origin",
+    "destination": "Destination",
+    "originPlaceholder": "Select origin sector",
+    "destinationPlaceholder": "Select destination sector",
+    "cta": "Search routes"
+  },
+  "poi": {
+    "title": "Points of interest"
+  },
+  "conditions": {
+    "title": "Conditions",
+    "rain": "Rain",
+    "rushHour": "Rush hour",
+    "paro": "Strike"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "You have not saved any favorite routes yet.",
+    "save": "Save",
+    "remove": "Remove",
+    "delete": "Delete",
+    "rerun": "Run again",
+    "viewAll": "View all"
+  },
+  "history": {
+    "title": "History",
+    "empty": "There are no recent searches yet.",
+    "repeat": "Repeat",
+    "viewAll": "View all"
+  },
+  "map": {
+    "title": "Schematic map",
+    "caption": "Select a route to preview it here"
+  },
+  "results": {
+    "title": "Results",
+    "emptySummary": "Search for a route to begin.",
+    "noResultsSummary": "No routes were found for this search.",
+    "summary": "{count} routes found",
+    "fastest": "Fastest",
+    "cheapest": "Cheapest",
+    "lowTransfers": "Fewer transfers",
+    "transfersLabel": "transfers",
+    "base": "Base",
+    "viewDetail": "View detail"
+  },
+  "detail": {
+    "title": "Route detail",
+    "empty": "Select a route to see the full detail.",
+    "step": "Step",
+    "totalTime": "Total time",
+    "totalCost": "Total cost",
+    "transfers": "Transfers",
+    "segments": "segments",
+    "noAlerts": "There are no active alerts for this route."
+  },
+  "status": {
+    "emptyTitle": "Your simulator is ready",
+    "emptyText": "Select origin, destination and conditions to see your options.",
+    "loading": "Calculating routes...",
+    "errorTitle": "Something went wrong",
+    "errorText": "We could not load the app correctly.",
+    "retry": "Retry",
+    "noResultsTitle": "No results",
+    "noResultsText": "Try another origin or destination."
+  },
+  "sort": {
+    "time": "Time",
+    "cost": "Cost",
+    "transfers": "Transfers"
+  },
+  "rules": {
+    "title": "How we calculate routes",
+    "time": "Base time = sum of time_min for each segment.",
+    "conditions": "For each active condition: time = time × (1 + time_pct / 100).",
+    "cost": "Total cost = sum of cost + sum of cost_extra from conditions.",
+    "sort": "Default order: time. You can also sort by cost or transfers."
+  },
+  "alerts": {
+    "rain": "Rain increases travel time.",
+    "rushHour": "Rush hour increases congestion.",
+    "paro": "The strike increases time and cost."
+  },
+  "modes": {
+    "guagua": "Bus",
+    "carroPublico": "Shared taxi",
+    "motoconcho": "Motorcycle taxi"
+  },
+  "validation": {
+    "requiredOrigin": "Select an origin.",
+    "requiredDestination": "Select a destination.",
+    "same": "Origin and destination cannot be the same."
+  },
+  "savings": {
+    "off": "Savings mode: off",
+    "on": "Savings mode: on"
+  },
+  "units": {
+    "minutes": "min"
+  }
+}

@@ -1,0 +1,373 @@
+[
+  {
+    "id": "r1",
+    "name": "Guagua directa por 27",
+    "origin": "gazcue",
+    "destination": "naco",
+    "segments": [
+      { "id": "s1", "fromId": "gazcue", "toId": "naco", "from": "Gazcue", "to": "Naco", "modeKey": "modes.guagua", "time_min": 18, "cost": 25, "instruction": { "es": "Toma la guagua por la 27 de Febrero hasta Naco.", "en": "Take the bus along 27 de Febrero to Naco." } }
+    ]
+  },
+  {
+    "id": "r2",
+    "name": "Carro público vía San Carlos",
+    "origin": "gazcue",
+    "destination": "naco",
+    "segments": [
+      { "id": "s2a", "fromId": "gazcue", "toId": "cristo_rey", "from": "Gazcue", "to": "Cristo Rey", "modeKey": "modes.carroPublico", "time_min": 8, "cost": 30, "instruction": { "es": "Carro público por la Bolívar.", "en": "Shared taxi along Bolívar." } },
+      { "id": "s2b", "fromId": "cristo_rey", "toId": "naco", "from": "Cristo Rey", "to": "Naco", "modeKey": "modes.guagua", "time_min": 14, "cost": 25, "instruction": { "es": "Transbordo a guagua hasta Naco.", "en": "Transfer to bus to Naco." } }
+    ]
+  },
+  {
+    "id": "r3",
+    "name": "Motoconcho rápido",
+    "origin": "gazcue",
+    "destination": "naco",
+    "segments": [
+      { "id": "s3", "fromId": "gazcue", "toId": "naco", "from": "Gazcue", "to": "Naco", "modeKey": "modes.motoconcho", "time_min": 12, "cost": 80, "instruction": { "es": "Motoconcho directo a Naco.", "en": "Direct motorcycle taxi to Naco." } }
+    ]
+  },
+  {
+    "id": "r4",
+    "name": "Carro público a Piantini",
+    "origin": "gazcue",
+    "destination": "piantini",
+    "segments": [
+      { "id": "s4a", "fromId": "gazcue", "toId": "naco", "from": "Gazcue", "to": "Naco", "modeKey": "modes.carroPublico", "time_min": 17, "cost": 35, "instruction": { "es": "Carro público rumbo a Naco.", "en": "Shared taxi toward Naco." } },
+      { "id": "s4b", "fromId": "naco", "toId": "piantini", "from": "Naco", "to": "Piantini", "modeKey": "modes.guagua", "time_min": 8, "cost": 20, "instruction": { "es": "Transbordo a guagua a Piantini.", "en": "Transfer to bus to Piantini." } }
+    ]
+  },
+  {
+    "id": "r5",
+    "name": "Guagua a Bella Vista",
+    "origin": "naco",
+    "destination": "bella_vista",
+    "segments": [
+      { "id": "s5", "fromId": "naco", "toId": "bella_vista", "from": "Naco", "to": "Bella Vista", "modeKey": "modes.guagua", "time_min": 20, "cost": 25, "instruction": { "es": "Guagua directa por la Churchill.", "en": "Direct bus along Churchill." } }
+    ]
+  },
+  {
+    "id": "r6",
+    "name": "Ruta mixta a Los Mina",
+    "origin": "gazcue",
+    "destination": "los_mina",
+    "segments": [
+      { "id": "s6a", "fromId": "gazcue", "toId": "cristo_rey", "from": "Gazcue", "to": "Cristo Rey", "modeKey": "modes.guagua", "time_min": 11, "cost": 25, "instruction": { "es": "Guagua hasta Cristo Rey.", "en": "Bus to Cristo Rey." } },
+      { "id": "s6b", "fromId": "cristo_rey", "toId": "los_mina", "from": "Cristo Rey", "to": "Los Mina", "modeKey": "modes.carroPublico", "time_min": 18, "cost": 30, "instruction": { "es": "Carro público cruzando el puente a Los Mina.", "en": "Shared taxi across the bridge to Los Mina." } }
+    ]
+  },
+  {
+    "id": "r7",
+    "name": "Guagua Zona Colonial - Gazcue",
+    "origin": "zona_colonial",
+    "destination": "gazcue",
+    "segments": [
+      { "id": "s7", "fromId": "zona_colonial", "toId": "gazcue", "from": "Zona Colonial", "to": "Gazcue", "modeKey": "modes.guagua", "time_min": 8, "cost": 25, "instruction": { "es": "Guagua por la Av. Independencia.", "en": "Bus along Independencia Ave." } }
+    ]
+  },
+  {
+    "id": "r8",
+    "name": "Concho a Cristo Rey",
+    "origin": "zona_colonial",
+    "destination": "cristo_rey",
+    "segments": [
+      { "id": "s8", "fromId": "zona_colonial", "toId": "cristo_rey", "from": "Zona Colonial", "to": "Cristo Rey", "modeKey": "modes.carroPublico", "time_min": 12, "cost": 30, "instruction": { "es": "Carro público por la Duarte.", "en": "Shared taxi along Duarte." } }
+    ]
+  },
+  {
+    "id": "r9",
+    "name": "OMSA a Los Prados",
+    "origin": "gazcue",
+    "destination": "los_prados",
+    "segments": [
+      { "id": "s9", "fromId": "gazcue", "toId": "los_prados", "from": "Gazcue", "to": "Los Prados", "modeKey": "modes.guagua", "time_min": 22, "cost": 25, "instruction": { "es": "OMSA por la 27 de Febrero.", "en": "OMSA bus along 27 de Febrero." } }
+    ]
+  },
+  {
+    "id": "r10",
+    "name": "Ruta a Villa Mella",
+    "origin": "arroyo_hondo",
+    "destination": "villa_mella",
+    "segments": [
+      { "id": "s10", "fromId": "arroyo_hondo", "toId": "villa_mella", "from": "Arroyo Hondo", "to": "Villa Mella", "modeKey": "modes.carroPublico", "time_min": 20, "cost": 35, "instruction": { "es": "Carro público rumbo a Villa Mella.", "en": "Shared taxi to Villa Mella." } }
+    ]
+  },
+  {
+    "id": "r11",
+    "name": "Guagua a Herrera",
+    "origin": "gazcue",
+    "destination": "herrera",
+    "segments": [
+      { "id": "s11", "fromId": "gazcue", "toId": "herrera", "from": "Gazcue", "to": "Herrera", "modeKey": "modes.guagua", "time_min": 25, "cost": 25, "instruction": { "es": "OMSA hasta Herrera.", "en": "OMSA bus to Herrera." } }
+    ]
+  },
+  {
+    "id": "r12",
+    "name": "Ruta a Alma Rosa",
+    "origin": "naco",
+    "destination": "alma_rosa",
+    "segments": [
+      { "id": "s12a", "fromId": "naco", "toId": "los_mina", "from": "Naco", "to": "Los Mina", "modeKey": "modes.guagua", "time_min": 30, "cost": 25, "instruction": { "es": "Guagua por la Charles de Gaulle.", "en": "Bus along Charles de Gaulle." } },
+      { "id": "s12b", "fromId": "los_mina", "toId": "alma_rosa", "from": "Los Mina", "to": "Alma Rosa", "modeKey": "modes.carroPublico", "time_min": 12, "cost": 30, "instruction": { "es": "Carro público hasta Alma Rosa.", "en": "Shared taxi to Alma Rosa." } }
+    ]
+  },
+  {
+    "id": "r13",
+    "name": "Zona Colonial a Naco",
+    "origin": "zona_colonial",
+    "destination": "naco",
+    "segments": [
+      { "id": "s13a", "fromId": "zona_colonial", "toId": "gazcue", "from": "Zona Colonial", "to": "Gazcue", "modeKey": "modes.guagua", "time_min": 8, "cost": 25, "instruction": { "es": "Guagua por la Independencia.", "en": "Bus along Independencia." } },
+      { "id": "s13b", "fromId": "gazcue", "toId": "naco", "from": "Gazcue", "to": "Naco", "modeKey": "modes.carroPublico", "time_min": 15, "cost": 30, "instruction": { "es": "Carro público hasta Naco.", "en": "Shared taxi to Naco." } }
+    ]
+  },
+  {
+    "id": "r14",
+    "name": "Los Prados a Bella Vista",
+    "origin": "los_prados",
+    "destination": "bella_vista",
+    "segments": [
+      { "id": "s14", "fromId": "los_prados", "toId": "bella_vista", "from": "Los Prados", "to": "Bella Vista", "modeKey": "modes.guagua", "time_min": 12, "cost": 25, "instruction": { "es": "Guagua por la Winston Churchill.", "en": "Bus along Winston Churchill." } }
+    ]
+  },
+  {
+    "id": "r15",
+    "name": "Cristo Rey a Los Mina",
+    "origin": "cristo_rey",
+    "destination": "los_mina",
+    "segments": [
+      { "id": "s15", "fromId": "cristo_rey", "toId": "los_mina", "from": "Cristo Rey", "to": "Los Mina", "modeKey": "modes.guagua", "time_min": 22, "cost": 25, "instruction": { "es": "Guagua cruzando el puente.", "en": "Bus crossing the bridge." } }
+    ]
+  },
+  {
+    "id": "r16",
+    "name": "Guagua a la UASD",
+    "origin": "zona_colonial",
+    "destination": "uasd",
+    "segments": [
+      { "id": "s16", "fromId": "zona_colonial", "toId": "uasd", "from": "Zona Colonial", "to": "UASD", "modeKey": "modes.guagua", "time_min": 10, "cost": 25, "instruction": { "es": "Guagua por la Av. Independencia hasta la UASD.", "en": "Bus along Independencia Ave. to UASD." } }
+    ]
+  },
+  {
+    "id": "r17",
+    "name": "Concho a la UASD",
+    "origin": "naco",
+    "destination": "uasd",
+    "segments": [
+      { "id": "s17a", "fromId": "naco", "toId": "gazcue", "from": "Naco", "to": "Gazcue", "modeKey": "modes.carroPublico", "time_min": 15, "cost": 30, "instruction": { "es": "Carro público hasta Gazcue.", "en": "Shared taxi to Gazcue." } },
+      { "id": "s17b", "fromId": "gazcue", "toId": "uasd", "from": "Gazcue", "to": "UASD", "modeKey": "modes.guagua", "time_min": 5, "cost": 25, "instruction": { "es": "Guagua corta hasta la UASD.", "en": "Short bus ride to UASD." } }
+    ]
+  },
+  {
+    "id": "r18",
+    "name": "Ruta al INTEC",
+    "origin": "gazcue",
+    "destination": "intec",
+    "segments": [
+      { "id": "s18a", "fromId": "gazcue", "toId": "los_prados", "from": "Gazcue", "to": "Los Prados", "modeKey": "modes.guagua", "time_min": 20, "cost": 25, "instruction": { "es": "OMSA por la 27 de Febrero.", "en": "OMSA along 27 de Febrero." } },
+      { "id": "s18b", "fromId": "los_prados", "toId": "intec", "from": "Los Prados", "to": "INTEC", "modeKey": "modes.motoconcho", "time_min": 5, "cost": 50, "instruction": { "es": "Motoconcho hasta el INTEC.", "en": "Motorcycle taxi to INTEC." } }
+    ]
+  },
+  {
+    "id": "r19",
+    "name": "Guagua al INTEC",
+    "origin": "naco",
+    "destination": "intec",
+    "segments": [
+      { "id": "s19", "fromId": "naco", "toId": "intec", "from": "Naco", "to": "INTEC", "modeKey": "modes.guagua", "time_min": 15, "cost": 25, "instruction": { "es": "Guagua directa al INTEC.", "en": "Direct bus to INTEC." } }
+    ]
+  },
+  {
+    "id": "r20",
+    "name": "Ruta a la PUCMM",
+    "origin": "gazcue",
+    "destination": "pucmm",
+    "segments": [
+      { "id": "s20a", "fromId": "gazcue", "toId": "arroyo_hondo", "from": "Gazcue", "to": "Arroyo Hondo", "modeKey": "modes.guagua", "time_min": 25, "cost": 25, "instruction": { "es": "Guagua hasta Arroyo Hondo.", "en": "Bus to Arroyo Hondo." } },
+      { "id": "s20b", "fromId": "arroyo_hondo", "toId": "pucmm", "from": "Arroyo Hondo", "to": "PUCMM", "modeKey": "modes.motoconcho", "time_min": 5, "cost": 40, "instruction": { "es": "Motoconcho hasta la PUCMM.", "en": "Motorcycle taxi to PUCMM." } }
+    ]
+  },
+  {
+    "id": "r21",
+    "name": "Guagua al Ágora Mall",
+    "origin": "gazcue",
+    "destination": "agora_mall",
+    "segments": [
+      { "id": "s21", "fromId": "gazcue", "toId": "agora_mall", "from": "Gazcue", "to": "Ágora Mall", "modeKey": "modes.guagua", "time_min": 20, "cost": 25, "instruction": { "es": "Guagua por la 27 de Febrero hasta Ágora Mall.", "en": "Bus along 27 de Febrero to Ágora Mall." } }
+    ]
+  },
+  {
+    "id": "r22",
+    "name": "Concho al Ágora Mall",
+    "origin": "zona_colonial",
+    "destination": "agora_mall",
+    "segments": [
+      { "id": "s22a", "fromId": "zona_colonial", "toId": "gazcue", "from": "Zona Colonial", "to": "Gazcue", "modeKey": "modes.guagua", "time_min": 8, "cost": 25, "instruction": { "es": "Guagua hasta Gazcue.", "en": "Bus to Gazcue." } },
+      { "id": "s22b", "fromId": "gazcue", "toId": "agora_mall", "from": "Gazcue", "to": "Ágora Mall", "modeKey": "modes.carroPublico", "time_min": 15, "cost": 35, "instruction": { "es": "Carro público hasta Ágora Mall.", "en": "Shared taxi to Ágora Mall." } }
+    ]
+  },
+  {
+    "id": "r23",
+    "name": "Ruta al Blue Mall",
+    "origin": "naco",
+    "destination": "blue_mall",
+    "segments": [
+      { "id": "s23", "fromId": "naco", "toId": "blue_mall", "from": "Naco", "to": "Blue Mall", "modeKey": "modes.carroPublico", "time_min": 10, "cost": 30, "instruction": { "es": "Carro público a Blue Mall por la Gustavo Mejía Ricart.", "en": "Shared taxi to Blue Mall along Gustavo Mejía Ricart." } }
+    ]
+  },
+  {
+    "id": "r24",
+    "name": "Guagua al Blue Mall",
+    "origin": "gazcue",
+    "destination": "blue_mall",
+    "segments": [
+      { "id": "s24a", "fromId": "gazcue", "toId": "naco", "from": "Gazcue", "to": "Naco", "modeKey": "modes.guagua", "time_min": 18, "cost": 25, "instruction": { "es": "Guagua por la 27 de Febrero.", "en": "Bus along 27 de Febrero." } },
+      { "id": "s24b", "fromId": "naco", "toId": "blue_mall", "from": "Naco", "to": "Blue Mall", "modeKey": "modes.carroPublico", "time_min": 10, "cost": 30, "instruction": { "es": "Carro público hasta Blue Mall.", "en": "Shared taxi to Blue Mall." } }
+    ]
+  },
+  {
+    "id": "r25",
+    "name": "Ruta al Sambil",
+    "origin": "naco",
+    "destination": "sambil",
+    "segments": [
+      { "id": "s25", "fromId": "naco", "toId": "sambil", "from": "Naco", "to": "Sambil", "modeKey": "modes.guagua", "time_min": 12, "cost": 25, "instruction": { "es": "Guagua por la 27 de Febrero al Sambil.", "en": "Bus along 27 de Febrero to Sambil." } }
+    ]
+  },
+  {
+    "id": "r26",
+    "name": "Guagua al Sambil",
+    "origin": "gazcue",
+    "destination": "sambil",
+    "segments": [
+      { "id": "s26", "fromId": "gazcue", "toId": "sambil", "from": "Gazcue", "to": "Sambil", "modeKey": "modes.guagua", "time_min": 24, "cost": 25, "instruction": { "es": "OMSA por la 27 de Febrero hasta el Sambil.", "en": "OMSA bus along 27 de Febrero to Sambil." } }
+    ]
+  },
+  {
+    "id": "r27",
+    "name": "Guagua al Malecón",
+    "origin": "gazcue",
+    "destination": "malecon",
+    "segments": [
+      { "id": "s27", "fromId": "gazcue", "toId": "malecon", "from": "Gazcue", "to": "Malecón", "modeKey": "modes.guagua", "time_min": 7, "cost": 25, "instruction": { "es": "Guagua corta hasta el Malecón.", "en": "Short bus to the Malecón." } }
+    ]
+  },
+  {
+    "id": "r28",
+    "name": "Concho al Malecón",
+    "origin": "zona_colonial",
+    "destination": "malecon",
+    "segments": [
+      { "id": "s28", "fromId": "zona_colonial", "toId": "malecon", "from": "Zona Colonial", "to": "Malecón", "modeKey": "modes.carroPublico", "time_min": 6, "cost": 30, "instruction": { "es": "Carro público por el Malecón.", "en": "Shared taxi along the Malecón." } }
+    ]
+  },
+  {
+    "id": "r29",
+    "name": "Ruta al Jardín Botánico",
+    "origin": "gazcue",
+    "destination": "jardin_botanico",
+    "segments": [
+      { "id": "s29a", "fromId": "gazcue", "toId": "arroyo_hondo", "from": "Gazcue", "to": "Arroyo Hondo", "modeKey": "modes.guagua", "time_min": 25, "cost": 25, "instruction": { "es": "Guagua hasta Arroyo Hondo.", "en": "Bus to Arroyo Hondo." } },
+      { "id": "s29b", "fromId": "arroyo_hondo", "toId": "jardin_botanico", "from": "Arroyo Hondo", "to": "Jardín Botánico", "modeKey": "modes.motoconcho", "time_min": 5, "cost": 40, "instruction": { "es": "Motoconcho al Jardín Botánico.", "en": "Motorcycle taxi to Botanical Garden." } }
+    ]
+  },
+  {
+    "id": "r30",
+    "name": "Guagua al Jardín Botánico",
+    "origin": "naco",
+    "destination": "jardin_botanico",
+    "segments": [
+      { "id": "s30", "fromId": "naco", "toId": "jardin_botanico", "from": "Naco", "to": "Jardín Botánico", "modeKey": "modes.guagua", "time_min": 20, "cost": 25, "instruction": { "es": "Guagua por la Tiradentes hasta el Jardín Botánico.", "en": "Bus along Tiradentes to Botanical Garden." } }
+    ]
+  },
+  {
+    "id": "r31",
+    "name": "UASD a INTEC",
+    "origin": "uasd",
+    "destination": "intec",
+    "segments": [
+      { "id": "s31", "fromId": "uasd", "toId": "intec", "from": "UASD", "to": "INTEC", "modeKey": "modes.guagua", "time_min": 25, "cost": 25, "instruction": { "es": "OMSA por la 27 de Febrero hasta el INTEC.", "en": "OMSA along 27 de Febrero to INTEC." } }
+    ]
+  },
+  {
+    "id": "r32",
+    "name": "UASD al Malecón",
+    "origin": "uasd",
+    "destination": "malecon",
+    "segments": [
+      { "id": "s32", "fromId": "uasd", "toId": "malecon", "from": "UASD", "to": "Malecón", "modeKey": "modes.carroPublico", "time_min": 8, "cost": 30, "instruction": { "es": "Carro público hasta el Malecón.", "en": "Shared taxi to the Malecón." } }
+    ]
+  },
+  {
+    "id": "r33",
+    "name": "UASD al Ágora Mall",
+    "origin": "uasd",
+    "destination": "agora_mall",
+    "segments": [
+      { "id": "s33", "fromId": "uasd", "toId": "agora_mall", "from": "UASD", "to": "Ágora Mall", "modeKey": "modes.guagua", "time_min": 22, "cost": 25, "instruction": { "es": "Guagua por la 27 de Febrero al Ágora Mall.", "en": "Bus along 27 de Febrero to Ágora Mall." } }
+    ]
+  },
+  {
+    "id": "r34",
+    "name": "Herrera a UASD",
+    "origin": "herrera",
+    "destination": "uasd",
+    "segments": [
+      { "id": "s34", "fromId": "herrera", "toId": "uasd", "from": "Herrera", "to": "UASD", "modeKey": "modes.guagua", "time_min": 28, "cost": 25, "instruction": { "es": "OMSA desde Herrera hasta la UASD.", "en": "OMSA from Herrera to UASD." } }
+    ]
+  },
+  {
+    "id": "r35",
+    "name": "Bella Vista al Sambil",
+    "origin": "bella_vista",
+    "destination": "sambil",
+    "segments": [
+      { "id": "s35", "fromId": "bella_vista", "toId": "sambil", "from": "Bella Vista", "to": "Sambil", "modeKey": "modes.carroPublico", "time_min": 10, "cost": 30, "instruction": { "es": "Carro público por la Churchill al Sambil.", "en": "Shared taxi along Churchill to Sambil." } }
+    ]
+  },
+  {
+    "id": "r36",
+    "name": "Los Mina a Alma Rosa",
+    "origin": "los_mina",
+    "destination": "alma_rosa",
+    "segments": [
+      { "id": "s36", "fromId": "los_mina", "toId": "alma_rosa", "from": "Los Mina", "to": "Alma Rosa", "modeKey": "modes.carroPublico", "time_min": 12, "cost": 25, "instruction": { "es": "Carro público hasta Alma Rosa.", "en": "Shared taxi to Alma Rosa." } }
+    ]
+  },
+  {
+    "id": "r37",
+    "name": "Piantini al Blue Mall",
+    "origin": "piantini",
+    "destination": "blue_mall",
+    "segments": [
+      { "id": "s37", "fromId": "piantini", "toId": "blue_mall", "from": "Piantini", "to": "Blue Mall", "modeKey": "modes.motoconcho", "time_min": 5, "cost": 50, "instruction": { "es": "Motoconcho rápido al Blue Mall.", "en": "Quick motorcycle taxi to Blue Mall." } }
+    ]
+  },
+  {
+    "id": "r38",
+    "name": "Arroyo Hondo a PUCMM",
+    "origin": "arroyo_hondo",
+    "destination": "pucmm",
+    "segments": [
+      { "id": "s38", "fromId": "arroyo_hondo", "toId": "pucmm", "from": "Arroyo Hondo", "to": "PUCMM", "modeKey": "modes.motoconcho", "time_min": 5, "cost": 40, "instruction": { "es": "Motoconcho hasta la PUCMM.", "en": "Motorcycle taxi to PUCMM." } }
+    ]
+  },
+  {
+    "id": "r39",
+    "name": "Villa Mella a Jardín Botánico",
+    "origin": "villa_mella",
+    "destination": "jardin_botanico",
+    "segments": [
+      { "id": "s39", "fromId": "villa_mella", "toId": "jardin_botanico", "from": "Villa Mella", "to": "Jardín Botánico", "modeKey": "modes.guagua", "time_min": 18, "cost": 25, "instruction": { "es": "Guagua hasta el Jardín Botánico.", "en": "Bus to the Botanical Garden." } }
+    ]
+  },
+  {
+    "id": "r40",
+    "name": "Gazcue a Arroyo Hondo",
+    "origin": "gazcue",
+    "destination": "arroyo_hondo",
+    "segments": [
+      { "id": "s40", "fromId": "gazcue", "toId": "arroyo_hondo", "from": "Gazcue", "to": "Arroyo Hondo", "modeKey": "modes.guagua", "time_min": 25, "cost": 25, "instruction": { "es": "Guagua por la Máximo Gómez hasta Arroyo Hondo.", "en": "Bus along Máximo Gómez to Arroyo Hondo." } }
+    ]
+  }
+]

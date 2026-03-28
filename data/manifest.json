@@ -1,0 +1,9 @@
+{
+  "name": "GuaguaTime RD",
+  "short_name": "GuaguaTime",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#0d3b66",
+  "icons": []
+}

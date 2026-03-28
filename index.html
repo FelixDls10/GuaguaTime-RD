@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d3b66" />
+    <meta name="description" content="GuaguaTime RD: simulador de rutas, tiempos y costos del transporte público dominicano." />
+    <title>GuaguaTime RD</title>
+    <link rel="manifest" href="./data/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+    <header class="app-header">
+      <div class="brand">
+        <img src="./GuaguaTimeRDiso.png" alt="GuaguaTime RD" class="brand__logo" />
+        <div class="brand__copy">
+          <p class="brand__eyebrow" data-i18n="app.eyebrow">Simulador de rutas</p>
+          <h1 class="brand__title">GuaguaTime RD</h1>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="lang-toggle" class="icon-button" type="button" aria-label="Cambiar idioma">
+          <span class="material-icons-round" aria-hidden="true">language</span>
+          <span id="lang-label">ES</span>
+        </button>
+        <button id="savings-toggle" class="icon-button" type="button" aria-label="Modo ahorro" aria-pressed="false">
+          <span class="material-icons-round" aria-hidden="true">bolt</span>
+        </button>
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="Cambiar tema">
+          <span class="material-icons-round" aria-hidden="true">light_mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="app-shell">
+      <!-- HERO -->
+      <section class="hero-card panel">
+        <div class="hero-card__content">
+          <div>
+            <p class="hero-card__eyebrow" data-i18n="results.title">Resultados</p>
+            <h2 class="hero-card__title">Movilidad urbana con una lectura clara y util</h2>
+            <p class="hero-card__text">Compara tiempo, costo y transbordos del transporte publico dominicano.</p>
+          </div>
+          <div class="hero-card__stats">
+            <article class="hero-stat">
+              <span class="material-icons-round hero-stat__icon">schedule</span>
+              <div>
+                <span class="hero-stat__label" data-i18n="sort.time">Tiempo</span>
+                <strong id="hero-time">--</strong>
+              </div>
+            </article>
+            <article class="hero-stat">
+              <span class="material-icons-round hero-stat__icon">payments</span>
+              <div>
+                <span class="hero-stat__label" data-i18n="sort.cost">Costo</span>
+                <strong id="hero-cost">--</strong>
+              </div>
+            </article>
+            <article class="hero-stat">
+              <span class="material-icons-round hero-stat__icon">sync_alt</span>
+              <div>
+                <span class="hero-stat__label" data-i18n="sort.transfers">Transbordos</span>
+                <strong id="hero-transfers">--</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="dashboard-grid">
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar sidebar--left">
+          <section class="panel">
+            <div class="panel__header">
+              <div>
+                <p class="panel__eyebrow">Planner</p>
+                <h2 data-i18n="search.title">Buscar ruta</h2>
+              </div>
+            </div>
+
+            <form id="search-form" class="search-form" novalidate>
+              <!-- ORIGIN SELECT -->
+              <div class="field-group">
+                <label for="origin" data-i18n="search.origin">Origen</label>
+                <div class="select-wrapper">
+                  <span class="material-icons-round select-icon">trip_origin</span>
+                  <select id="origin" name="origin" class="select-field">
+                    <option value="">-- Selecciona origen --</option>
+                  </select>
+                </div>
+                <small id="origin-error" class="field-error"></small>
+              </div>
+
+              <div class="swap-row">
+                <button id="swap-btn" class="icon-button icon-button--swap" type="button" aria-label="Intercambiar">
+                  <span class="material-icons-round">swap_vert</span>
+                </button>
+              </div>
+
+              <!-- DESTINATION SELECT -->
+              <div class="field-group">
+                <label for="destination" data-i18n="search.destination">Destino</label>
+                <div class="select-wrapper">
+                  <span class="material-icons-round select-icon">location_on</span>
+                  <select id="destination" name="destination" class="select-field">
+                    <option value="">-- Selecciona destino --</option>
+                  </select>
+                </div>
+                <small id="destination-error" class="field-error"></small>
+              </div>
+
+              <!-- CONDITIONS WITH SWITCHES -->
+              <fieldset class="conditions-fieldset">
+                <legend data-i18n="conditions.title">Condiciones</legend>
+                <div id="conditions-list" class="conditions-list"></div>
+              </fieldset>
+
+              <button class="button button--primary button--full" type="submit">
+                <span class="material-icons-round">search</span>
+                <span data-i18n="search.cta">Buscar rutas</span>
+              </button>
+            </form>
+          </section>
+
+          <!-- FAVORITES SIDEBAR -->
+          <section class="panel compact-panel">
+            <div class="panel__header panel__header--between">
+              <div>
+                <p class="panel__eyebrow">Saved</p>
+                <h2 data-i18n="favorites.title">Favoritos</h2>
+              </div>
+              <button id="open-favorites-modal" class="text-link" type="button" data-i18n="favorites.viewAll">Ver todos</button>
+            </div>
+            <div id="favorites-view"></div>
+          </section>
+        </aside>
+
+        <!-- CENTER CONTENT -->
+        <section class="content-column">
+          <section class="panel panel--results">
+            <div class="panel__header panel__header--between panel__header--wrap">
+              <div>
+                <p class="panel__eyebrow">Overview</p>
+                <h2 data-i18n="results.title">Resultados</h2>
+                <p id="results-summary" class="muted-text" data-i18n="results.emptySummary">Busca una ruta para comenzar.</p>
+              </div>
+              <div class="sort-group" role="tablist" aria-label="Ordenar resultados">
+                <button class="sort-chip is-active" type="button" data-sort="time" data-i18n="sort.time">Tiempo</button>
+                <button class="sort-chip" type="button" data-sort="cost" data-i18n="sort.cost">Costo</button>
+                <button class="sort-chip" type="button" data-sort="transfers" data-i18n="sort.transfers">Transbordos</button>
+              </div>
+            </div>
+            <div id="status-view" class="status-view"></div>
+            <div id="results-list" class="results-list"></div>
+          </section>
+        </section>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="sidebar sidebar--right">
+          <section class="panel panel--map">
+            <div class="panel__header">
+              <div>
+                <p class="panel__eyebrow">Map</p>
+                <h2 data-i18n="map.title">Mapa esquematico</h2>
+              </div>
+              <span id="map-caption" class="muted-text" data-i18n="map.caption">Selecciona una ruta para verla aqui</span>
+            </div>
+            <div id="map-container" class="map-container" aria-live="polite"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel__header">
+              <div>
+                <p class="panel__eyebrow">Analysis</p>
+                <h2 data-i18n="detail.title">Detalle de ruta</h2>
+              </div>
+            </div>
+            <div id="detail-view"></div>
+          </section>
+
+          <section class="panel compact-panel">
+            <div class="panel__header panel__header--between">
+              <div>
+                <p class="panel__eyebrow">Recent</p>
+                <h2 data-i18n="history.title">Historial</h2>
+              </div>
+              <button id="open-history-modal" class="text-link" type="button" data-i18n="history.viewAll">Ver todo</button>
+            </div>
+            <div id="history-view"></div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <details class="calculation-rules">
+        <summary data-i18n="rules.title">Como calculamos las rutas</summary>
+        <ul>
+          <li data-i18n="rules.time">Tiempo base = suma de tiempo_min de cada tramo.</li>
+          <li data-i18n="rules.conditions">Por cada condicion activa: tiempo = tiempo x (1 + tiempo_pct / 100).</li>
+          <li data-i18n="rules.cost">Costo total = suma de costo + suma de costo_extra de condiciones.</li>
+          <li data-i18n="rules.sort">Orden por defecto: tiempo. Tambien puedes ordenar por costo o transbordos.</li>
+        </ul>
+      </details>
+    </footer>
+
+    <!-- DETAIL MODAL -->
+    <div id="detail-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="detail-modal-title">
+      <div class="modal-sheet">
+        <header class="modal-sheet__header">
+          <h2 id="detail-modal-title" data-i18n="detail.title">Detalle de ruta</h2>
+          <button class="modal-close" type="button" data-close-modal="detail-modal" aria-label="Cerrar">
+            <span class="material-icons-round">close</span>
+          </button>
+        </header>
+        <div class="modal-sheet__body" id="detail-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- FAVORITES MODAL -->
+    <div id="favorites-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="favorites-modal-title">
+      <div class="modal-sheet">
+        <header class="modal-sheet__header">
+          <h2 id="favorites-modal-title" data-i18n="favorites.title">Favoritos</h2>
+          <button class="modal-close" type="button" data-close-modal="favorites-modal" aria-label="Cerrar">
+            <span class="material-icons-round">close</span>
+          </button>
+        </header>
+        <div class="modal-sheet__body">
+          <div id="favorites-modal-content" class="modal-body__grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HISTORY MODAL -->
+    <div id="history-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="history-modal-title">
+      <div class="modal-sheet">
+        <header class="modal-sheet__header">
+          <h2 id="history-modal-title" data-i18n="history.title">Historial</h2>
+          <button class="modal-close" type="button" data-close-modal="history-modal" aria-label="Cerrar">
+            <span class="material-icons-round">close</span>
+          </button>
+        </header>
+        <div class="modal-sheet__body">
+          <div id="history-modal-content" class="modal-body__grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

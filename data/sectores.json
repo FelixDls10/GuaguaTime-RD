@@ -1,0 +1,22 @@
+[
+  { "id": "gazcue", "name": "Gazcue", "coords": { "x": 100, "y": 170 } },
+  { "id": "naco", "name": "Naco", "coords": { "x": 280, "y": 80 } },
+  { "id": "piantini", "name": "Piantini", "coords": { "x": 420, "y": 130 } },
+  { "id": "bella_vista", "name": "Bella Vista", "coords": { "x": 320, "y": 260 } },
+  { "id": "los_mina", "name": "Los Mina", "coords": { "x": 540, "y": 200 } },
+  { "id": "zona_colonial", "name": "Zona Colonial", "coords": { "x": 60, "y": 220 } },
+  { "id": "los_prados", "name": "Los Prados", "coords": { "x": 350, "y": 170 } },
+  { "id": "arroyo_hondo", "name": "Arroyo Hondo", "coords": { "x": 250, "y": 50 } },
+  { "id": "villa_mella", "name": "Villa Mella", "coords": { "x": 380, "y": 40 } },
+  { "id": "herrera", "name": "Herrera", "coords": { "x": 80, "y": 120 } },
+  { "id": "cristo_rey", "name": "Cristo Rey", "coords": { "x": 200, "y": 200 } },
+  { "id": "alma_rosa", "name": "Alma Rosa", "coords": { "x": 580, "y": 160 } },
+  { "id": "uasd", "name": "UASD", "coords": { "x": 115, "y": 185 } },
+  { "id": "intec", "name": "INTEC", "coords": { "x": 340, "y": 155 } },
+  { "id": "pucmm", "name": "PUCMM", "coords": { "x": 265, "y": 60 } },
+  { "id": "agora_mall", "name": "Ágora Mall", "coords": { "x": 295, "y": 90 } },
+  { "id": "blue_mall", "name": "Blue Mall", "coords": { "x": 435, "y": 140 } },
+  { "id": "sambil", "name": "Sambil", "coords": { "x": 360, "y": 180 } },
+  { "id": "malecon", "name": "Malecón", "coords": { "x": 85, "y": 250 } },
+  { "id": "jardin_botanico", "name": "Jardín Botánico", "coords": { "x": 240, "y": 40 } }
+]
